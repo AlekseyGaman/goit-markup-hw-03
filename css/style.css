@@ -27,7 +27,7 @@ ul {
 
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -51,7 +51,6 @@ body {
   /* padding-left: 15px;
   padding-right: 15px; */
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .header {
@@ -89,7 +88,7 @@ body {
   margin-left: auto;
 }
 
-.header-mail {
+.header-mail-tel:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -160,7 +159,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-primary-color);
-  margin: 30px auto;
+  margin: auto;
+  margin-bottom: var(--typical-margin);
 }
 
 .hero-btn {
@@ -339,6 +339,10 @@ body {
   color: var(--accent-color);
 }
 
+.footer-logo-margin {
+  margin-bottom: 20px;
+}
+
 .fotter-address-link {
   font-style: normal;
   font-size: 14px;
@@ -347,11 +351,7 @@ body {
   color: var(--white-primary-color);
 }
 
-.footer-address {
-  margin-top: 30px;
-}
-
-.footer-item {
+.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -390,7 +390,7 @@ body {
 }
 
 .portfolio-btn-list {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -442,6 +442,10 @@ body {
   margin-right: 0;
 }
 
+.portfolio-list:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
@@ -460,5 +464,7 @@ body {
 
 .portfolio-container-list {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
